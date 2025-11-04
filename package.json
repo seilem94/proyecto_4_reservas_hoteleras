@@ -1,0 +1,28 @@
+{
+  "name": "proyecto_4",
+  "version": "0.9.0",
+  "description": "Backend para implementar servicios basicos CRUD aplicados a la gestion de reservas en la industria hotelera",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seilem94/proyecto_4_reservas_hoteleras.git"
+  },
+  "keywords": [
+    "reserva",
+    "reservas",
+    "hotel",
+    "hotelera",
+    "crud",
+    "backend",
+    "api"
+  ],
+  "author": "seilem94",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seilem94/proyecto_4_reservas_hoteleras/issues"
+  },
+  "homepage": "https://github.com/seilem94/proyecto_4_reservas_hoteleras#readme"
+}
