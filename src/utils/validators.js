@@ -10,7 +10,15 @@ export function parseEntero(v) {
 }
 
 export function validateCrear(body) {
-  const required = ['hotel', 'fecha_inicio', 'fecha_fin', 'tipo_habitacion', 'estado', 'num_huespedes', 'nombre_huesped'];
+  const required = [
+    'hotel',
+    'fecha_inicio',
+    'fecha_fin',
+    'tipo_habitacion',
+    'estado',
+    'num_huespedes',
+    'nombre_huesped',
+  ];
   for (const k of required) {
     if (body[k] === undefined || body[k] === null || body[k] === '') {
       return { error: `Campo requerido: ${k}` };
@@ -21,10 +29,12 @@ export function validateCrear(body) {
   }
   const fi = toDate(body.fecha_inicio);
   const ff = toDate(body.fecha_fin);
-  if (fi > ff) return { error: 'fecha_inicio no puede ser posterior a fecha_fin' };
+  if (fi > ff)
+    return { error: 'fecha_inicio no puede ser posterior a fecha_fin' };
 
   const num = Number(body.num_huespedes);
-  if (!Number.isInteger(num) || num <= 0) return { error: 'num_huespedes debe ser un entero positivo' };
+  if (!Number.isInteger(num) || num <= 0)
+    return { error: 'num_huespedes debe ser un entero positivo' };
 
   const value = {
     hotel: String(body.hotel).trim(),
@@ -33,7 +43,7 @@ export function validateCrear(body) {
     tipo_habitacion: String(body.tipo_habitacion).trim(),
     estado: String(body.estado).trim(),
     num_huespedes: num,
-    nombre_huesped: String(body.nombre_huesped).trim()
+    nombre_huesped: String(body.nombre_huesped).trim(),
   };
   return { value };
 }
@@ -42,7 +52,8 @@ export function validateActualizar(body) {
   const value = {};
   if ('hotel' in body) value.hotel = String(body.hotel).trim();
   if ('fecha_inicio' in body) {
-    if (!isDateString(body.fecha_inicio)) return { error: 'fecha_inicio inválida' };
+    if (!isDateString(body.fecha_inicio))
+      return { error: 'fecha_inicio inválida' };
     value.fecha_inicio = body.fecha_inicio;
   }
   if ('fecha_fin' in body) {
@@ -50,15 +61,19 @@ export function validateActualizar(body) {
     value.fecha_fin = body.fecha_fin;
   }
   if (value.fecha_inicio && value.fecha_fin) {
-    if (toDate(value.fecha_inicio) > toDate(value.fecha_fin)) return { error: 'fecha_inicio no puede ser posterior a fecha_fin' };
+    if (toDate(value.fecha_inicio) > toDate(value.fecha_fin))
+      return { error: 'fecha_inicio no puede ser posterior a fecha_fin' };
   }
-  if ('tipo_habitacion' in body) value.tipo_habitacion = String(body.tipo_habitacion).trim();
+  if ('tipo_habitacion' in body)
+    value.tipo_habitacion = String(body.tipo_habitacion).trim();
   if ('estado' in body) value.estado = String(body.estado).trim();
   if ('num_huespedes' in body) {
     const n = Number(body.num_huespedes);
-    if (!Number.isInteger(n) || n <= 0) return { error: 'num_huespedes debe ser entero positivo' };
+    if (!Number.isInteger(n) || n <= 0)
+      return { error: 'num_huespedes debe ser entero positivo' };
     value.num_huespedes = n;
   }
-  if ('nombre_huesped' in body) value.nombre_huesped = String(body.nombre_huesped).trim();
+  if ('nombre_huesped' in body)
+    value.nombre_huesped = String(body.nombre_huesped).trim();
   return { value };
 }

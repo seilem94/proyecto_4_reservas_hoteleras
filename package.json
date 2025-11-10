@@ -2,7 +2,7 @@
   "name": "proyecto_4",
   "version": "0.9.0",
   "description": "Backend para implementar servicios basicos CRUD aplicados a la gestion de reservas en la industria hotelera",
-  "main": "main.js",
+  "main": "src/main.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

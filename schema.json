@@ -1,0 +1,53 @@
+{
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "integer",
+        "description": "El identificador único de la reserva"
+      },
+      "hotel": {
+        "type": "string",
+        "description": "El nombre del hotel reservado"
+      },
+      "fecha_inicio": {
+        "type": "string",
+        "format": "date",
+        "description": "La fecha de inicio de la reserva"
+      },
+      "fecha_fin": {
+        "type": "string",
+        "format": "date",
+        "description": "La fecha de fin de la reserva"
+      },
+      "tipo_habitacion": {
+        "type": "string",
+        "description": "El tipo de habitación reservada"
+      },
+      "estado": {
+        "type": "string",
+        "description": "El estado de la reserva (por ejemplo, confirmada, pendiente, cancelada, etc.)"
+      },
+      "num_huespedes": {
+        "type": "integer",
+        "description": "El número de huéspedes para la reserva"
+      }
+    },
+    "required": [
+      "id",
+      "hotel",
+      "fecha_inicio",
+      "fecha_fin",
+      "tipo_habitacion",
+      "estado",
+      "num_huespedes"
+    ],
+    "example": {
+      "id": 1,
+      "hotel": "Hotel Paraíso",
+      "fecha_inicio": "2023-05-15",
+      "fecha_fin": "2023-05-20",
+      "tipo_habitacion": "Doble",
+      "estado": "Confirmada",
+      "num_huespedes": 3
+    }
+}

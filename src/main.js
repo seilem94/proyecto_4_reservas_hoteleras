@@ -10,11 +10,11 @@ const port = process.env.PORT || 3000;
 const serverUrl = process.env.SERVER_URL || `http://localhost:${port}`;
 
 app.get('/', (_req, res) =>
-    res.json({
-        ok: true,
-        name: 'API Reservas Hoteleras',
-        version: '1.0.0',
-    })
+  res.json({
+    ok: true,
+    name: 'API Reservas Hoteleras',
+    version: '1.0.0',
+  })
 );
 
 app.use('/api/reservas', reservasRouter);
