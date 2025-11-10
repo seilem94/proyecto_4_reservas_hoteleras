@@ -1,7 +1,9 @@
 import { AppError, NotFoundError, InternalServerError } from './http-errors.js';
 
 export function notFound(req, res, next) {
-  next(new NotFoundError(`Ruta ${req.method} ${req.originalUrl} no encontrada`));
+  next(
+    new NotFoundError(`Ruta ${req.method} ${req.originalUrl} no encontrada`)
+  );
 }
 
 export function errorHandler(err, req, res, _next) {
