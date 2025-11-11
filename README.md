@@ -10,26 +10,26 @@ Crear una arquitectura de carpetas y archivos clara. Se utilizó la entregada co
 
 De esta forma se separá la responsabilidad de la interacción http de la API del controller, de la lógica de negocios en el services.
 
-    proyecto_4_reservas_hoteleras
-    ├── src/
-    │   ├── controllers/
-    |   |   └── reservas.controller.js
-    │   ├── routes/
-    |   |   └── reservas.routes.js
-    │   ├── services/
-    |   |   └── reservas.service.js
-    │   ├── utils/
-    |   |   ├── error-handler.js
-    |   |   ├── http-error.js
-    |   |   └── validator.js
-    │   └── main.js  <- ARCHIVO DE ENTRADA
-    ├── .env
-    ├── .env.example
-    ├── .gitignore
-    ├── package-lock.json
-    ├── package.json
-
-    └── README.md
+        proyecto_4_reservas_hoteleras
+        ├── src/
+        │   ├── controllers/
+        |   |   └── reservas.controller.js
+        │   ├── routes/
+        |   |   └── reservas.routes.js
+        │   ├── services/
+        |   |   └── reservas.service.js
+        │   ├── utils/
+        |   |   ├── error-handler.js
+        |   |   ├── http-error.js
+        |   |   └── validator.js
+        │   └── main.js  <- ARCHIVO DE ENTRADA
+        ├── .env
+        ├── .env.example
+        ├── .gitignore
+        ├── package-lock.json
+        ├── package.json
+        ├── schema.json
+        └── README.md
 
 ### Schema.json
 
